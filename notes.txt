@@ -1,0 +1,41 @@
+package.json:
+a été créé avec: npm init
+
+dans package.json:
+la partie "scripts" correspond par ex:
+si on fait "npm start", c'est la commande
+"node app.js" (ou apres "nodemon app.js") qui sera executée.
+C'est utile par ex dans un projet a plusieurs avec beaucoup de fichiers,
+il suffit simplement de faire npm start pour lancer le serveur
+sans avoir besoin de connaitre exactement le fichier de lancement.
+note: le script "start" est deja implicite;
+pour faire un script perso, par ex la ligne "start-server",
+pour le lancer il faut faire:
+npm run start-server
+
+nodemon package:
+npm install nodemon --save-dev (permet de dire qu'on utilise le package pour le dev)
+(npm install -g nodemon installe le package globalement et pas seulement pour ce projet)
+nodemon est un package permettant notamment de
+relancer automatiquement le serveur lorsqu'on fait
+un changement (evite de le faire manuellement).
+
+
+npm install --save body-parser
+
+SQL:
+npm install --save mysql2
+npm install --save sequelize
+db.execute('SELECT * FROM table'); -> permet de faire une requete SQL
+mais Sequelize permet d'utiliser des methodes pour faire des requetes SQL
+Sequelize est un ORM (ActiveRecord est l'ORM de Ruby on Rails)
+
+noSQL:
+npm install --save mongodb
+npm install --save mongoose
+
+travailler avec des sessions:
+npm install --save express-session
+voir doc de express-session pour voir les differents moyens de stocker les sessions,
+mais pour ce projet on utilise:
+npm install --save connect-mongodb-session
