@@ -8,7 +8,6 @@ exports.getProducts = (req, res, next) => {
                 prods: products,
                 docTitle: 'All Products',
                 path: '/products',
-                isAuth: req.session.isLoggedIn
             });
         })
         .catch();
@@ -22,7 +21,6 @@ exports.getProduct = (req, res, next) => {
                 product: product,
                 docTitle: product.title,
                 path: '/products',
-                isAuth: req.session.isLoggedIn
             });
         })
         .catch();
@@ -34,8 +32,7 @@ exports.getIndex = (req, res, next) => {
             res.render('shop/index', {
                 prods: products,
                 docTitle: 'Shop',
-                path: '/',
-                isAuth: req.session.isLoggedIn
+                path: '/'
             });
         })
         .catch();
@@ -50,7 +47,6 @@ exports.getCart = (req, res, next) => {
                 path: '/cart',
                 docTitle: 'Your Cart',
                 products: products,
-                isAuth: req.session.isLoggedIn
             });
         })
         .catch()
@@ -77,7 +73,7 @@ exports.postOrder = (req, res, next) => {
             });
             const order = new Order({
                 user: {
-                    name: req.user.name,
+                    email: req.user.email,
                     userId: req.user // on peut mettre tout l'objet et mongoose va selectionner le _id automatiquement
                 },
                 products: products
@@ -100,7 +96,6 @@ exports.getOrders = (req, res, next) => {
                 path: '/orders',
                 docTitle: 'Your Orders',
                 orders: orders,
-                isAuth: req.session.isLoggedIn
             });
         })
         .catch();

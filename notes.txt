@@ -39,3 +39,24 @@ npm install --save express-session
 voir doc de express-session pour voir les differents moyens de stocker les sessions,
 mais pour ce projet on utilise:
 npm install --save connect-mongodb-session
+
+crypter mots de passes:
+npm install --save bcryptjs (bcrypt utilisé pour transcendence)
+
+package pour generer un CSRF token:
+npm install --save csurf
+
+flash messages:
+npm install --save connect-flash
+
+authentication overview:
+creer une session par utilisateur
+proteger les pages reservees aux inscrits
+utiliser un csrf token pour chaque form
+crypter les mots de passes
+
+emails:
+un serveur email est complexe et est une technologie completement differente d'un serveur web.
+la plupart des sites utilisent un serveur mail externe (comme AWS).
+npm install --save nodemailer
+npm install --save nodemailer-sendgrid-transport  pour integrer le mailer sendgrid a nodemailer
