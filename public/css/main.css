@@ -190,7 +190,9 @@ form {
 }
 
 .card__image img {
+  object-fit: cover;
   width: 100%;
+  height: 300px;
 }
 
 .card__actions {
@@ -246,6 +248,26 @@ form {
   border-color: rgb(151, 8, 8);;
   background: rgb(252, 145, 145);
   color: rgb(151, 8, 8);
+}
+
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #00695c;
+  padding: 0.5rem;
+  border: 1px solid #00695c;
+  margin: 0 1rem;
+}
+
+.pagination a:hover,
+.pagination a:active,
+.pagination a.active {
+  background: #00695c;
+  color: white;
 }
 
 @media (min-width: 768px) {

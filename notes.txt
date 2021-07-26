@@ -20,8 +20,9 @@ nodemon est un package permettant notamment de
 relancer automatiquement le serveur lorsqu'on fait
 un changement (evite de le faire manuellement).
 
-
+parse incoming requests:
 npm install --save body-parser
+permet de faire en sorte que req.body.nameofelement soit parsée
 
 SQL:
 npm install --save mysql2
@@ -60,3 +61,21 @@ un serveur email est complexe et est une technologie completement differente d'u
 la plupart des sites utilisent un serveur mail externe (comme AWS).
 npm install --save nodemailer
 npm install --save nodemailer-sendgrid-transport  pour integrer le mailer sendgrid a nodemailer
+
+validation:
+npm install --save express-validator
+
+gestion d'erreurs:
+try { } catch { } : synchronous code
+then().catch() : asynchronous code
+
+parser incoming request pour les fichiers:
+npm install --save multer
+
+creer des fichiers pdf dans le serveur:
+npm install --save pdfkit
+
+pagination:
+on utilise les fonctions skip() et limit() avec mongodb
+avec une db SQL les equivalents sont la commande LIMIT et OFFSET: https://stackoverflow.com/questions/3799193/mysql-data-best-way-to-implement-paging
+et avec sequelize: https://sequelize.org/master/manual/model-querying-basics.html
