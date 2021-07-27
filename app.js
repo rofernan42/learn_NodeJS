@@ -48,7 +48,7 @@ const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
 
 // app.use(bodyParser.urlencoded({ extended: false })); // deprecated
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true })); // x-www-form-urlencoded <form>
 app.use(multer({ storage: fileStorage, fileFilter: fileFilter }).single('image')); // 'image' est la valeur du champ 'name' de l'input du form dans edit-product.ejs
 
 app.use(express.static(path.join(__dirname, 'public'))); //permet de chercher un chemin de fichier static (pour linker les fichiers css par ex)

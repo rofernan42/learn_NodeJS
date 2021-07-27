@@ -1,6 +1,9 @@
 package.json:
 a été créé avec: npm init
 
+express js:
+npm install --save express
+
 dans package.json:
 la partie "scripts" correspond par ex:
 si on fait "npm start", c'est la commande
